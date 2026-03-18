@@ -1,0 +1,23 @@
+<h2>{{ district.name }} (TIN: {{ district.tin_number }})</h2>
+<table border="1">
+  <tr>
+    <th>Facility</th>
+    <th>Invoice Number</th>
+    <th>Invoice Date</th>
+    <th>Invoice Amount</th>
+    <th>Payment Date</th>
+    <th>Amount Paid</th>
+    <th>Balance</th>
+  </tr>
+  {% for facility in facilities %}
+  <tr>
+    <td>{{ facility.facility_name }}</td>
+    <td>{{ facility.invoice_number }}</td>
+    <td>{{ facility.invoice_date }}</td>
+    <td>{{ facility.invoice_amount }}</td>
+    <td>{{ facility.payment_date }}</td>
+    <td>{{ facility.amount_paid }}</td>
+    <td>{{ facility.balance }}</td>
+  </tr>
+  {% endfor %}
+</table>
